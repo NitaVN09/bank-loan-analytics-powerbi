@@ -83,9 +83,9 @@ The report is based on the query document included in this repo and uses measure
   - [Data_Validation_Queries.sql](sql/Data_Validation_Queries.sql)
 - [project_images/screenshots/](project_images/screenshots/)
   - [README.md](project_images/screenshots/README.md)
-  - ![summary-page.png](project_images/screenshots/summary-page.png)
-  - ![overview-page.png](project_images/screenshots/overview-page.png)
-  - ![details-page.png](project_images/screenshots/details-page.png)
+  - [summary-page.png](project_images/screenshots/summary-page.png)
+  - [overview-page.png](project_images/screenshots/overview-page.png)
+  - [details-page.png](project_images/screenshots/details-page.png)
   - [risk-analysis.svg](project_images/screenshots/risk-analysis.svg)
   - [insights-page.svg](project_images/screenshots/insights-page.svg)
 - [power_bi_code/](power_bi_code/)
@@ -115,35 +115,22 @@ The repository uses `data/financial_loan_data.csv` as the ingestion source for t
 
 ## Dashboard preview
 
-Replace the placeholder files below with your real dashboard screenshots:
+dashboard screenshots:
 
+  ### ** Summary Dashboard **  
 ![summary-page.png](project_images/screenshots/summary-page.png)
+
+  ### ** Overview Dashboard **  
 ![overview-page.png](project_images/screenshots/overview-page.png)
+
+  ### ** Details Dashboard **
 ![details-page.png](project_images/screenshots/details-page.png)
+
+  ### ** Risk Analysis Dashboard **
 ![Risk Analysis](project_images/screenshots/risk-analysis.svg)
+
+  ### **  Insights Dashboard **
 ![Insights](project_images/screenshots/insights-page.svg)
-
-## Suggested GitHub presentation
-
-Present the project like a product page:
-
-**Bank Loan Analysis Dashboard**  
-Power BI analytics project for portfolio monitoring, loan quality tracking, and borrower segmentation.
-
-Add these sections near the top of your repo:
-
-1. Short project summary
-2. Dashboard preview images
-3. Business questions answered
-4. KPI / measure logic
-5. Report page breakdown
-6. How to open and use the PBIX file
-
-## What to replace
-
-- Replace each `.svg` placeholder in `project_images/screenshots/` with a `.png` export from Power BI
-- Keep the same base filenames if you want the README links to remain unchanged
-- If you prefer, you can keep the `.svg` placeholders and simply add your final screenshots alongside them
 
 ## Business questions answered
 
