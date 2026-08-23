@@ -1,0 +1,46 @@
+// Sample DAX export for portfolio presentation
+
+Total Applications =
+COUNTROWS(bank_loan_data)
+
+Total Funded Amount =
+SUM(bank_loan_data[loan_amount])
+
+Total Amount Received =
+SUM(bank_loan_data[total_payment])
+
+Average Interest Rate =
+AVERAGE(bank_loan_data[int_rate])
+
+Average DTI =
+AVERAGE(bank_loan_data[dti])
+
+Good Loan Applications =
+CALCULATE(
+    [Total Applications],
+    bank_loan_data[loan_status] IN {"Fully Paid", "Current"}
+)
+
+Bad Loan Applications =
+CALCULATE(
+    [Total Applications],
+    bank_loan_data[loan_status] = "Charged Off"
+)
+
+Good Loan % =
+DIVIDE([Good Loan Applications], [Total Applications])
+
+Bad Loan % =
+DIVIDE([Bad Loan Applications], [Total Applications])
+
+MTD Total Funded Amount =
+CALCULATE(
+    [Total Funded Amount],
+    DATESMTD('Calendar'[Date])
+)
+
+PMTD Total Funded Amount =
+CALCULATE(
+    [Total Funded Amount],
+    DATEADD('Calendar'[Date], -1, MONTH)
+)
