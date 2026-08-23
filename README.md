@@ -53,6 +53,14 @@ The report is based on the query document included in this repo and uses measure
 
 ```text
 README.md
+assets/
+├── README.md
+data/
+├── README.md
+dax/
+├── Power_BI_Measures.dax
+sql/
+├── Data_Validation_Queries.sql
 project_images/screenshots/
 ├── summary-page.svg
 ├── overview-page.svg
