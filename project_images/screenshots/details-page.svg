@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#0b1530"/>
+  <rect x="40" y="40" width="1200" height="640" rx="24" fill="#12224a" stroke="#2d4d8f" stroke-width="3"/>
+  <text x="640" y="220" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="54" text-anchor="middle" font-weight="700">Details Page</text>
+  <text x="640" y="300" fill="#c9d7ff" font-family="Arial, Helvetica, sans-serif" font-size="28" text-anchor="middle">Replace this placeholder with your Power BI screenshot</text>
+  <text x="640" y="360" fill="#8ea7e8" font-family="Arial, Helvetica, sans-serif" font-size="22" text-anchor="middle">Recommended file: screenshots/details-page.png</text>
+</svg>
