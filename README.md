@@ -1,14 +1,28 @@
 # Bank Loan Analysis Dashboard
 
-A Power BI dashboard project for analyzing bank loan performance, loan quality, borrower behavior, and portfolio trends across time, geography, and loan characteristics.
+Power BI portfolio project for analyzing loan performance, risk, borrower behavior, and portfolio trends across time, geography, and loan segments.
 
-## What this project shows
+## Why this project matters
 
-- **Executive summary** with total applications, funded amount, amount received, average interest rate, and average DTI
-- **Good vs bad loan analysis** using loan status segmentation
-- **Monthly portfolio trends** for applications, funding, and collections
-- **State, term, employment length, purpose, and home ownership breakdowns**
-- **Loan-level detail view** for drilling into individual records
+This project is strongest when it shows more than visuals. To impress recruiters, it should demonstrate:
+
+- Clean data modeling and reusable DAX
+- Clear business storytelling from KPIs to insights
+- Strong report navigation and user experience
+- Real portfolio, risk, and borrower segmentation analysis
+- Professional documentation and presentation
+
+## Power BI skills demonstrated
+
+| Skill area | What to show |
+|---|---|
+| **Data modeling** | Proper relationships, date table, and star-schema style design |
+| **DAX** | Named measures for KPIs, ratio calculations, trend measures, and segmentation logic |
+| **Visual design** | Consistent theme, aligned layout, readable KPI cards, and purposeful color choices |
+| **UX** | Drillthrough, tooltips, bookmarks, navigation buttons, and page flow |
+| **Analytics** | Good vs bad loans, trend analysis, borrower profiling, and risk monitoring |
+| **Performance** | Efficient measures, reduced visual clutter, and optimized summary tables |
+| **Documentation** | Clear README, data dictionary, measure list, and insight notes |
 
 ## Report pages
 
@@ -48,6 +62,30 @@ The report is based on the query document included in this repo and uses measure
 - Fluent 2 theme package
 - USA state shape map for geography analysis
 - Slicers and drill-friendly report structure
+
+## What to improve to look more senior
+
+| Area | Improvement to add |
+|---|---|
+| **Modeling** | Add a proper calendar table and use it for month-to-date, year-to-date, and trend logic |
+| **Measures** | Move all KPI logic into explicit DAX measures instead of relying on visual-level calculations |
+| **Navigation** | Add a home page, page navigator, and bookmark-driven buttons |
+| **Insights** | Add a dedicated insights page with short written takeaways from the visuals |
+| **Risk analysis** | Add delinquency, charge-off, collection-rate, and risk banding KPIs |
+| **Borrower analysis** | Add income band, grade/subgrade, and ownership segmentation |
+| **Interactivity** | Add drillthrough, custom tooltips, and a few what-if parameters |
+| **Documentation** | Add a data dictionary, measure glossary, and a short methodology section |
+
+## Best portfolio upgrades to add next
+
+1. Add a **Home** page with navigation buttons and a project summary.
+2. Create a **Date table** and use it for all time intelligence.
+3. Build a **Measures table** and move KPI logic into reusable DAX measures.
+4. Add **Drillthrough** pages for borrower and loan-level analysis.
+5. Add **Tooltips** that show extra context for charts and maps.
+6. Create an **Insights** page with 5-7 business conclusions.
+7. Add a **Risk** page with delinquency and collection metrics.
+8. Add a **Data Dictionary** so recruiters can see your modeling discipline.
 
 ## Repository content
 
@@ -98,6 +136,7 @@ Add these sections near the top of your repo:
 4. KPI / measure logic
 5. Report page breakdown
 6. How to open and use the PBIX file
+7. What Power BI skills this project demonstrates
 
 ## What to replace
 
@@ -115,26 +154,12 @@ Add these sections near the top of your repo:
 
 ## Future enhancements
 
-- Add a KPI summary section for monthly and year-over-year comparison
+- Add monthly and year-over-year comparison
 - Add borrower segmentation by income band and credit risk
 - Add a dedicated insights page with written findings
 - Add exported dashboard images to the repo for a stronger GitHub landing page
-
-## Recommended architecture upgrades
-
-If you want this to look like a polished Power BI application, add these next:
-
-| Area | Improvement |
-|---|---|
-| **Modeling** | Create a proper date table and use it for all month-to-date / previous-month logic |
-| **Measures** | Move KPI logic into named DAX measures instead of relying on ad hoc visual queries |
-| **Navigation** | Add a home page, page navigator, and bookmark-driven buttons |
-| **UX** | Add custom tooltips, drillthrough pages, and back buttons |
-| **Insights** | Add a written insights page with 5–10 key observations |
-| **Risk view** | Add delinquency, charge-off, and collection-rate KPIs |
-| **Borrower view** | Add income band, grade/subgrade, and ownership segmentation |
-| **Performance** | Reduce repeated visuals and use summarized measures for heavy tables |
-| **Documentation** | Include a data dictionary, measure list, and screenshot gallery in the repo |
+- Add a data dictionary and measure glossary
+- Add drillthrough, tooltips, and bookmark navigation
 
 ## Extra pages I would add
 
