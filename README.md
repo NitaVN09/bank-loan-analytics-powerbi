@@ -1,125 +1,145 @@
 # Bank Loan Analysis Dashboard
 
-Power BI portfolio case study for monitoring loan issuance, portfolio risk, borrower behavior, and collections performance.
+A Power BI dashboard project for analyzing bank loan performance, loan quality, borrower behavior, and portfolio trends across time, geography, and loan characteristics.
 
-## Executive summary
+## What this project shows
 
-This project should show recruiters that you can do more than build visuals. It should demonstrate business thinking, model design, DAX depth, and polished report UX.
-
-### What the dashboard answers
-
-- How much capital was funded and collected?
-- How many loans are good vs bad?
-- Which borrower segments drive the portfolio?
-- How do term, purpose, and geography affect risk?
-
-## Sample business insights
-
-Use the following as portfolio-style insights and replace them with your exact values from the report if needed:
-
-- **86.18%** of issued loans are **Good Loans** (Fully Paid / Current), representing about **$370M** in funded capital.
-- **Debt Consolidation** accounts for more than **47%** of total loan applications.
-- **60-month** loans carry a higher average interest rate than **36-month** loans.
-- Loan quality, term length, and purpose distribution together tell a clear risk story for the portfolio.
-
-## Power BI skills demonstrated
-
-| Skill area | What this project should show |
-|---|---|
-| **Data modeling** | Star-schema style design, clean relationships, and a calendar table |
-| **DAX** | Reusable measures, time intelligence, and conditional logic |
-| **Visual design** | Consistent theme, aligned layout, and clear KPI hierarchy |
-| **UX** | Drillthrough, bookmarks, tooltips, and navigation buttons |
-| **Analytics** | Good vs bad loans, trends, borrower segments, and risk views |
-| **Documentation** | Data dictionary, measure catalog, and insight summary |
-| **Version control** | PBIP-style file structure for Git-friendly development |
-
-## Advanced DAX and data architecture
-
-Keep all measures in a dedicated `_Measures` table and use a proper `Calendar` table for time intelligence.
-
-```dax
-Total Applications =
-COUNTROWS(bank_loan_data)
-```
-
-```dax
-MTD Total Funded Amount =
-CALCULATE(
-    SUM(bank_loan_data[loan_amount]),
-    DATESMTD('Calendar'[Date])
-)
-```
-
-```dax
-Good Loan % =
-DIVIDE(
-    CALCULATE(
-        [Total Applications],
-        bank_loan_data[loan_status] IN {"Fully Paid", "Current"}
-    ),
-    [Total Applications]
-)
-```
-
-```dax
-PMTD Total Funded Amount =
-CALCULATE(
-    [Total Funded Amount],
-    DATEADD('Calendar'[Date], -1, MONTH)
-)
-```
+- **Executive summary** with total applications, funded amount, amount received, average interest rate, and average DTI
+- **Good vs bad loan analysis** using loan status segmentation
+- **Monthly portfolio trends** for applications, funding, and collections
+- **State, term, employment length, purpose, and home ownership breakdowns**
+- **Loan-level detail view** for drilling into individual records
 
 ## Report pages
 
 | Page | Purpose |
 |---|---|
-| **Summary** | KPI cards, good vs bad loan split, headline portfolio metrics |
-| **Overview** | Monthly trends, geography, purpose, term, and employment analysis |
+| **Summary** | High-level KPI cards and good/bad loan split |
+| **Overview** *(spelled `Overveiw` in the PBIX)* | Portfolio analysis by month, state, term, employment length, purpose, and home ownership |
 | **Details** | Record-level table with filters for deep inspection |
 
-## What to improve to look senior-level
+## KPI logic
 
-1. Add a **Home** page with navigation buttons.
-2. Add a **Calendar** table and use it for all time intelligence.
-3. Move all metrics into a dedicated **_Measures** table.
-4. Add **Drillthrough** pages for loan and borrower analysis.
-5. Add **Tooltips** for state, purpose, and risk visuals.
-6. Create an **Insights** page with 5 to 7 written takeaways.
-7. Add **Collections** and **Risk** views with delinquency-style metrics.
-8. Include a **Data Dictionary** and a **Measure Glossary**.
+The report is based on the query document included in this repo and uses measures such as:
 
-## Recommended portfolio folder structure
+- Total Loan Applications
+- Total Funded Amount
+- Total Amount Received
+- Average Interest Rate
+- Average DTI
+- Good Loan Percentage / Bad Loan Percentage
+- Good Loan Applications / Bad Loan Applications
+- Good Loan Funded Amount / Bad Loan Funded Amount
+- Good Loan Amount Received / Bad Loan Amount Received
 
-| Folder / file | Purpose |
-|---|---|
-| `project_images/screenshots/` | Current dashboard screenshots used in the README |
-| `assets/` | High-res screenshots, GIF walkthroughs, and final presentation media |
-| `data/` | Data dictionary and sample source extracts |
-| `dax/` | Plain-text export of core DAX measures |
-| `sql/` | Data validation and reconciliation queries |
-| `power_bi_code/` | Existing PBIX file and query document |
+## Data dimensions used
+
+- Loan status
+- Issue date
+- State
+- Term
+- Employment length
+- Purpose
+- Home ownership
+
+## Design notes
+
+- Dark dashboard theme for a premium finance-style look
+- Fluent 2 theme package
+- USA state shape map for geography analysis
+- Slicers and drill-friendly report structure
+
+## Repository content
+
+```text
+README.md
+project_images/screenshots/
+├── summary-page.svg
+├── overview-page.svg
+├── details-page.svg
+├── risk-analysis.svg
+├── insights-page.svg
+└── README.md
+power_bi_code/
+├── bank loan data-dashboard.pbix
+└── BANK LOAN REPORT - QUERY DOCUMENT.docx
+```
 
 ## How to use
 
-1. Open `power_bi_code/bank loan data-dashboard.pbix` in **Power BI Desktop**.
-2. Review `power_bi_code/BANK LOAN REPORT - QUERY DOCUMENT.docx` for the current logic.
-3. Export final screenshots into `project_images/screenshots/` or `assets/`.
-4. Replace the sample DAX and SQL files with your own exported logic if available.
-5. If you migrate to **PBIP**, keep the project in a Git-friendly folder structure.
+1. Open `power_bi_code/bank loan data-dashboard.pbix` in **Power BI Desktop**
+2. Review `power_bi_code/BANK LOAN REPORT - QUERY DOCUMENT.docx` for the KPI logic and groupings
+3. Refresh or replace the dataset if needed
+4. Export dashboard screenshots and replace the placeholder files in `project_images/screenshots/`
+5. Keep the same screenshot names so the README preview links stay valid
 
-## LinkedIn post structure
+## Dashboard preview
 
-1. **Headline:** Automating Financial Risk & Loan Portfolio Tracking with Power BI and DAX
-2. **Problem:** Manual portfolio tracking makes risk and MTD monitoring slow.
-3. **Solution:** Star schema model, DAX time intelligence, and interactive report navigation.
-4. **Media:** Add a short screen recording showing slicers, map selection, and drillthrough.
-5. **CTA:** Link directly to your GitHub repository.
+Replace the placeholder files below with your real dashboard screenshots:
+
+![Summary](project_images/screenshots/summary-page.svg)
+![Overview](project_images/screenshots/overview-page.svg)
+![Details](project_images/screenshots/details-page.svg)
+![Risk Analysis](project_images/screenshots/risk-analysis.svg)
+![Insights](project_images/screenshots/insights-page.svg)
+
+## Suggested GitHub presentation
+
+Present the project like a product page:
+
+**Bank Loan Analysis Dashboard**  
+Power BI analytics project for portfolio monitoring, loan quality tracking, and borrower segmentation.
+
+Add these sections near the top of your repo:
+
+1. Short project summary
+2. Dashboard preview images
+3. Business questions answered
+4. KPI / measure logic
+5. Report page breakdown
+6. How to open and use the PBIX file
+
+## What to replace
+
+- Replace each `.svg` placeholder in `project_images/screenshots/` with a `.png` export from Power BI
+- Keep the same base filenames if you want the README links to remain unchanged
+- If you prefer, you can keep the `.svg` placeholders and simply add your final screenshots alongside them
+
+## Business questions answered
+
+- How many loan applications were received?
+- How much capital was funded and how much was collected?
+- What portion of loans are good vs bad?
+- Which states generate the most loan activity?
+- How do term, purpose, and employment length affect loan behavior?
 
 ## Future enhancements
 
-- Add a dedicated **Insights** page
-- Add **borrower segmentation** by income band and credit risk
-- Add **monthly and year-over-year** comparisons
-- Add **exported screenshots** and a short GIF walkthrough in `assets/`
-- Add a **PBIP** version of the project for modern version control
+- Add a KPI summary section for monthly and year-over-year comparison
+- Add borrower segmentation by income band and credit risk
+- Add a dedicated insights page with written findings
+- Add exported dashboard images to the repo for a stronger GitHub landing page
+
+## Recommended architecture upgrades
+
+If you want this to look like a polished Power BI application, add these next:
+
+| Area | Improvement |
+|---|---|
+| **Modeling** | Create a proper date table and use it for all month-to-date / previous-month logic |
+| **Measures** | Move KPI logic into named DAX measures instead of relying on ad hoc visual queries |
+| **Navigation** | Add a home page, page navigator, and bookmark-driven buttons |
+| **UX** | Add custom tooltips, drillthrough pages, and back buttons |
+| **Insights** | Add a written insights page with 5–10 key observations |
+| **Risk view** | Add delinquency, charge-off, and collection-rate KPIs |
+| **Borrower view** | Add income band, grade/subgrade, and ownership segmentation |
+| **Performance** | Reduce repeated visuals and use summarized measures for heavy tables |
+| **Documentation** | Include a data dictionary, measure list, and screenshot gallery in the repo |
+
+## Extra pages I would add
+
+1. **Insights** — executive takeaways and anomalies.
+2. **Risk Analysis** — delinquency, charge-off, and portfolio quality trends.
+3. **Borrower Profile** — income, grade, employment, and home ownership breakdowns.
+4. **Collections** — payment behavior, recovery, and monthly collection rate.
+5. **Data Dictionary** — column definitions and KPI formulas.
