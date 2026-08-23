@@ -117,9 +117,9 @@ The repository uses `data/financial_loan_data.csv` as the ingestion source for t
 
 Replace the placeholder files below with your real dashboard screenshots:
 
-![Summary](project_images/screenshots/summary-page.svg)
-![Overview](project_images/screenshots/overview-page.svg)
-![Details](project_images/screenshots/details-page.svg)
+![summary-page.png](project_images/screenshots/summary-page.png)
+![overview-page.png](project_images/screenshots/overview-page.png)
+![details-page.png](project_images/screenshots/details-page.png)
 ![Risk Analysis](project_images/screenshots/risk-analysis.svg)
 ![Insights](project_images/screenshots/insights-page.svg)
 
