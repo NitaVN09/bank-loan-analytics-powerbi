@@ -51,27 +51,25 @@ The report is based on the query document included in this repo and uses measure
 
 ## Repository content
 
-```text
-README.md
-assets/
-├── README.md
-data/
-├── README.md
-dax/
-├── Power_BI_Measures.dax
-sql/
-├── Data_Validation_Queries.sql
-project_images/screenshots/
-├── summary-page.svg
-├── overview-page.svg
-├── details-page.svg
-├── risk-analysis.svg
-├── insights-page.svg
-└── README.md
-power_bi_code/
-├── bank loan data-dashboard.pbix
-└── BANK LOAN REPORT - QUERY DOCUMENT.docx
-```
+- [README.md](README.md)
+- [assets/](assets/)
+  - [README.md](assets/README.md)
+- [data/](data/)
+  - [README.md](data/README.md)
+- [dax/](dax/)
+  - [Power_BI_Measures.dax](dax/Power_BI_Measures.dax)
+- [sql/](sql/)
+  - [Data_Validation_Queries.sql](sql/Data_Validation_Queries.sql)
+- [project_images/screenshots/](project_images/screenshots/)
+  - [README.md](project_images/screenshots/README.md)
+  - [summary-page.svg](project_images/screenshots/summary-page.svg)
+  - [overview-page.svg](project_images/screenshots/overview-page.svg)
+  - [details-page.svg](project_images/screenshots/details-page.svg)
+  - [risk-analysis.svg](project_images/screenshots/risk-analysis.svg)
+  - [insights-page.svg](project_images/screenshots/insights-page.svg)
+- [power_bi_code/](power_bi_code/)
+  - [bank loan data-dashboard.pbix](power_bi_code/bank%20loan%20data-dashboard.pbix)
+  - [BANK LOAN REPORT - QUERY DOCUMENT.docx](power_bi_code/BANK%20LOAN%20REPORT%20-%20QUERY%20DOCUMENT.docx)
 
 ## How to use
 
