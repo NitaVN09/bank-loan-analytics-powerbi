@@ -9,6 +9,10 @@ A Power BI dashboard project for analyzing bank loan performance, loan quality, 
 - **Monthly portfolio trends** for applications, funding, and collections
 - **State, term, employment length, purpose, and home ownership breakdowns**
 - **Loan-level detail view** for drilling into individual records
+-  Demonstrates portfolio and risk analysis for a lending business
+- Highlights modeling discipline with a calendar table and dedicated measure logic
+- Proves **DAX skill** through KPI, time intelligence, and loan-status calculations
+- Presents a clean three-page report structure for executive, analytical, and detail-level review
 
 ## Report pages
 
@@ -78,6 +82,19 @@ The report is based on the query document included in this repo and uses measure
 3. Refresh or replace the dataset if needed
 4. Export dashboard screenshots and replace the placeholder files in `project_images/screenshots/`
 5. Keep the same screenshot names so the README preview links stay valid
+
+
+## Data ingested
+
+The repository uses `data/financial_loan_data.csv` as the ingestion source for the report model.
+
+| Metric | Value |
+|---|---|
+| Records ingested | 38,576 |
+| Columns | 24 |
+| States covered | 50 |
+| Loan purposes | 14 |
+| Loan statuses | 3 |
 
 ## Dashboard preview
 
