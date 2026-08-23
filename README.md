@@ -14,6 +14,23 @@ A Power BI dashboard project for analyzing bank loan performance, loan quality, 
 - Proves **DAX skill** through KPI, time intelligence, and loan-status calculations
 - Presents a clean three-page report structure for executive, analytical, and detail-level review
 
+## Skills used in this project
+
+| Skill | How it was used | Reference |
+|---|---|---|
+| **SQL** | Validated the source loan data, checked loan-status distribution, purpose mix, term behavior, and monthly funded amounts before reporting. | [sql/Data_Validation_Queries.sql](sql/Data_Validation_Queries.sql) |
+| **DAX** | Built KPI measures, Good vs Bad loan calculations, and MTD / PMTD time-intelligence logic. | [dax/Power_BI_Measures.dax](dax/Power_BI_Measures.dax) |
+| **Entity Modeling** | Designed the semantic model with `bank_loan_data`, `Date Table`, and `Select Measure`, plus the date relationship used for monthly analysis. | [models/README.md](models/README.md) |
+| **Advanced Excel / Data Handling** | Worked with a structured tabular loan source, field typing, and report-ready column preparation for ingestion. | [data/README.md](data/README.md) |
+
+### Skill adoption in Power BI language
+
+- **SQL** for source validation and KPI cross-checking
+- **Data modeling** for the fact, date, and selector tables
+- **DAX** for business measures, time intelligence, and loan classification
+- **Data preparation** for ingestion-ready tabular fields
+- **Reporting** for KPI cards, trends, segmentation, and drilldown views
+
 ## Report pages
 
 | Page | Purpose |
