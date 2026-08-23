@@ -63,7 +63,7 @@ The report is based on the query document included in this repo and uses measure
 - USA state shape map for geography analysis
 - Slicers and drill-friendly report structure
 
-## What to improve to look more senior
+##[TODO] What to improve
 
 | Area | Improvement to add |
 |---|---|
@@ -76,7 +76,7 @@ The report is based on the query document included in this repo and uses measure
 | **Interactivity** | Add drillthrough, custom tooltips, and a few what-if parameters |
 | **Documentation** | Add a data dictionary, measure glossary, and a short methodology section |
 
-## Best portfolio upgrades to add next
+##[TODO] Best portfolio upgrades to add next
 
 1. Add a **Home** page with navigation buttons and a project summary.
 2. Create a **Date table** and use it for all time intelligence.
